@@ -65,16 +65,16 @@ Let's look at the summary
 summary(surveys_raw)
 ```
 
-There are few things we need to clean in the dataset.
+There are few things that we need to clean up in the dataset.
 
-There is missing species_id in some records. Let's remove those.
+The species_id is missing in some records. Let's remove those.
 
 ```{r}
 surveys <- surveys_raw %>%
            filter(species_id != "")
 ```
 
-There are a lot of species with low counts, let's remove the ones below 10 counts
+There are many species with low counts, let's remove the ones below 10 counts
 
 ```{r}
 # count records per species
